@@ -1,0 +1,196 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+h1::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  color: #000;
+  overflow: hidden;
+  border-right: 1px solid #000;
+  animation: type 10s steps(38) infinite;
+  white-space: nowrap;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+.wrapper {
+  background: #333;
+  display: flex;
+  padding: 30px 20px;
+  min-height: 80vh;
+  margin: 0 20px;
+  border-radius: 50px;
+}
+
+.tabs-container {
+  float: left;
+  border-right: 2px solid white;
+}
+
+.tabs-container-box {
+  margin-top: 50px;
+  margin-right: 10px;
+}
+
+.tab {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  /* padding: 12px 24px; */
+  border-radius: 5px 0 0 5px;
+  margin-bottom: 10px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: white;
+  background-color: #333;
+  transition: 0.3s ease;
+  width: 320px;
+  margin-top: 20px;
+}
+
+.tabs_img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.tab.active, .kulish,
+.tab:hover.kulish {
+  border: 3px solid #3C4F76;
+  border-radius: 10px;
+}
+
+.tab.active.kvitka,
+.tab:hover.kvitka {
+  border: 3px solid #AB330C;
+  border-radius: 10px;
+}
+
+.tab.active.ukrainka,
+.tab:hover.ukrainka {
+  border: 3px solid #7DDF64;
+  border-radius: 10px;
+}
+
+.tab.active.kostomarov,
+.tab:hover.kostomarov {
+  border: 3px solid #0047FF;
+  border-radius: 10px;
+}
+
+.tab.active.myrnii,
+.tab:hover.myrnii {
+  border: 3px solid #7B7F9C;
+  border-radius: 10px;
+}
+
+.tab.active.kotsyubinski,
+.tab:hover.kotsyubinski {
+  border: 3px solid #A32A27;
+  border-radius: 10px;
+}
+
+.tab-content {
+  float: left;
+  padding: 20px;
+  width: 75%;
+  min-height: 300px;
+  display: none;
+  border-radius: 0 5px 5px 0;
+}
+.tab-content_wrapper {
+  display: flex;
+  height: 90vh;
+  background: white;
+  border-radius: 30px;
+}
+.tab-content_wrapper_text_title {
+  text-align: center;
+  background: #3C4F76;
+  padding: 10px 20px;
+  border-top-right-radius: 30px;
+  margin: 0 auto;
+  width: 31vw;
+  color: #fff;
+}
+.tab-content_wrapper_text .kvitka {
+  background: #AB330C;
+  color: #fff;
+}
+.tab-content_wrapper_text .ukrainka {
+  background: #7DDF64;
+  color: #000;
+}
+.tab-content_wrapper_text .kastomarov {
+  background: #0047FF;
+  color: #DDDBF1;
+}
+.tab-content_wrapper_text .myrnii {
+  background: #7B7F9C;
+  color: #DDDBF1;
+}
+.tab-content_wrapper_text .kotsyubinski {
+  background: #A32A27;
+  color: #DDDBF1;
+}
+.tab-content_wrapper_desc::-webkit-scrollbar {
+  width: 0 !important;
+}
+.tab-content_wrapper_desc {
+  display: block;
+  overflow-y: scroll;
+  text-align: center;
+  height: 80vh;
+  margin-left: -10px;
+  padding-bottom: 10px;
+}
+.tab-content_wrapper_desc h4 {
+  color: rgb(0, 71, 255);
+  font-size: 20px;
+}
+.tab-content_wrapper_desc ul {
+  text-align: left;
+}
+.tab-content_wrapper_desc ul li {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.tab-content_wrapper img {
+  height: 90vh;
+  width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.tab-content.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
